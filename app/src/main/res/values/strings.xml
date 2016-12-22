@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BleConn</string>
+    <string name="EXTRA_ADDRESS"></string>
+</resources>
