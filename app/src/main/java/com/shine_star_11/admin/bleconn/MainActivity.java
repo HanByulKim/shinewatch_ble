@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent turnBTon = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(turnBTon, 1);
             }
+            btnpair.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    pairedDevicesList();
+                }
+            });
         }
-        btnpair.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                pairedDevicesList();
-            }
-        });
     }
     private void pairedDevicesList(){
         pairedDevices=myBluetooth.getBondedDevices();
